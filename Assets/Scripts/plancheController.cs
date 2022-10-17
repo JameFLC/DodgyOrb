@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class plancheController : MonoBehaviour
+public class PlancheController : MonoBehaviour
 {
     //Privates variables reachable in the inspector
     [SerializeField] private Vector2 rotationXZ;    //Vector modified by the controller
@@ -26,7 +26,7 @@ public class plancheController : MonoBehaviour
         targetRotation.transform.rotation = Quaternion.Euler(rotationXZ.x, targetRotation.transform.rotation.y, rotationXZ.y);
 
         //Interpolates between plancheMesh.rotation and targetRotation.transform.rotation by timeCount * speed and normalizes the result afterwards
-        plancheMesh.rotation = Quaternion.Lerp(plancheMesh.rotation, targetRotation.transform.rotation, timeCount * speed);
+        plancheMesh.rotation = Quaternion.Lerp(plancheMesh.rotation, targetRotation.transform.rotation, Time.deltaTime * speed);
 
         timeCount = timeCount + Time.deltaTime;
     }
