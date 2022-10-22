@@ -8,7 +8,6 @@ public class PlancheController : MonoBehaviour
     [SerializeField] private float speed = 0.01f;
 
     //Privates variables not reachable in the inspector
-    private float timeCount = 0.0f;
     private GameObject targetRotation;  //Used in Lerp function as target rotation
 
     // Start is called before the first frame update
@@ -27,7 +26,5 @@ public class PlancheController : MonoBehaviour
 
         //Interpolates between plancheMesh.rotation and targetRotation.transform.rotation by timeCount * speed and normalizes the result afterwards
         plancheMesh.rotation = Quaternion.Lerp(plancheMesh.rotation, targetRotation.transform.rotation, Time.deltaTime * speed);
-
-        timeCount = timeCount + Time.deltaTime;
     }
 }
