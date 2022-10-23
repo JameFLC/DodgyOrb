@@ -1,19 +1,18 @@
+using DodgyOrb.RemoteControls;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DodgyOrb.RemoteControls;
 
 namespace DodgyOrb.ThreeDButtons
 {
-    public class DraggableButton : MonoBehaviour, IClickable, IHoverable
+    public class Slider : MonoBehaviour, IClickable, IHoverable
     {
+        [SerializeField] bool axis = false;
         [SerializeField] float dragRadius = 0.5f;
         [SerializeField] DragPlane dragPlane;
+
         [SerializeField] Material hoveredMaterial;
-        [Space]
-        [Space]
-        [SerializeField] bool axisConstrained = false;
-        [SerializeField] bool axis = false;
+
 
         private RemoteController _controller;
 
@@ -27,7 +26,7 @@ namespace DodgyOrb.ThreeDButtons
             _controller = GetComponent<RemoteController>();
             _defaultMaterial = GetComponent<MeshRenderer>().material;
 
-            
+
 
             if (_controller == null)
             {
@@ -44,14 +43,14 @@ namespace DodgyOrb.ThreeDButtons
             if (_isHold)
             {
                 Vector2 dragMovement = ClampVector(dragPlane.GetDragMovement(), new Vector2(-dragRadius, -dragRadius), new Vector2(dragRadius, dragRadius));
-
-
-                if (axisConstrained)
-                {
-                    dragMovement = new Vector2(axis ? dragMovement.x : 0, axis ? 0 : dragMovement.y);
-                }
                 
+                
+                dragMovement = new Vector2(axis ? dragMovement.x : 0, axis ? 0 : dragMovement.y);
+
+                Debug.Log(dragMovement);
+
                 Vector2 normalizedMovement = dragMovement / dragRadius;
+
 
 
                 transform.localPosition = new Vector3(dragMovement.x, transform.position.y, dragMovement.y);
@@ -68,7 +67,7 @@ namespace DodgyOrb.ThreeDButtons
         public void GetClicked()
         {
             dragPlane.ActivateDragPlane();
-            
+
 
 
             _isHold = true;
@@ -81,8 +80,8 @@ namespace DodgyOrb.ThreeDButtons
 
             _isHold = false;
             transform.localPosition = new Vector3(0, transform.position.y, 0);
-            
-            
+
+
             SetMaterial(_isHovered);
 
 
@@ -105,6 +104,5 @@ namespace DodgyOrb.ThreeDButtons
         {
             GetComponent<MeshRenderer>().material = setDefault ? hoveredMaterial : _defaultMaterial;
         }
-
     }
 }

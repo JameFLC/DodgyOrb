@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DodgyOrb.RemoteControls;
-namespace DodgyOrb
+
+
+
+namespace DodgyOrb.ThreeDButtons
 {
-    public class BaseButton : MonoBehaviour, IClickable, IHoverable
+    public class Button : MonoBehaviour, IClickable, IHoverable
     {
         [SerializeField] private Material hoveredMaterial;
         [SerializeField] private bool sendDataOnRelease = true;
@@ -34,12 +37,8 @@ namespace DodgyOrb
         }
         public void GetReleased()
         {
-
-
-
             if (sendDataOnRelease)
                 _controller.SendData(releasedData);
-
 
             transform.position += new Vector3(0, 0.1f, 0);
 

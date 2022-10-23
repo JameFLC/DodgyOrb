@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DodgyOrb
+namespace DodgyOrb.ThreeDButtons
 {
     public class DragPlane : MonoBehaviour, IDraggable
     {
