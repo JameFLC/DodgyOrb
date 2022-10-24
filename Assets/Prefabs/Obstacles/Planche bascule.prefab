@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3026980372839499447}
   m_Layer: 0
-  m_Name: mesh plancheBascule
+  m_Name: PivotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3026980374626849835}
-  - component: {fileID: 3116262205537826641}
+  - component: {fileID: 3501736021444047748}
   m_Layer: 0
   m_Name: Planche bascule
   m_TagString: Untagged
@@ -63,9 +63,9 @@ Transform:
   m_Children:
   - {fileID: 3026980372839499447}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3116262205537826641
+--- !u!114 &3501736021444047748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,9 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322c856dc34495e418c6a30e0d8b5c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationXZ: {x: 0, y: 0}
-  plancheMesh: {fileID: 3281795789156338551}
-  speed: 10
+  rotationAxis: {x: 0, y: 0}
+  pivot: {fileID: 3026980372839499447}
+  speed: 0.01
 --- !u!1001 &3026980372965764252
 PrefabInstance:
   m_ObjectHideFlags: 0
