@@ -35,7 +35,7 @@ namespace DodgyOrb.ThreeDButtons
 
             transform.position += new Vector3(0, -0.1f, 0);
         }
-        public void GetReleased()
+        public void GetReleased() // TODO FIXE LE RELEASE BIZAR QUI S'APPLIQUE PLUSIEURS FOIS
         {
             if (sendDataOnRelease)
                 _controller.SendData(releasedData);
