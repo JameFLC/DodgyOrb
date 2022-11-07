@@ -188,7 +188,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7613205484263952802}
-  m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -197,8 +197,8 @@ Transform:
   - {fileID: 7613205485409813115}
   - {fileID: 2884069917325716232}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7613205485409813114
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +314,8 @@ MonoBehaviour:
   dragRadius: 0.25
   dragPlane: {fileID: 2884069917325716228}
   hoveredMaterial: {fileID: 2100000, guid: 5154a15e05cff6547996be7b37fabefa, type: 2}
+  axisConstrained: 0
+  axis: 0
 --- !u!114 &7613205485409813116
 MonoBehaviour:
   m_ObjectHideFlags: 0

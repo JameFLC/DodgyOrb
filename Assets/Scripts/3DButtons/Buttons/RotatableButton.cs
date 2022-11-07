@@ -5,15 +5,11 @@ using DodgyOrb.RemoteControls;
 
 namespace DodgyOrb.ThreeDButtons
 {
-    public class DraggableButton : MonoBehaviour, IClickable, IHoverable
+    public class RotatableButton : MonoBehaviour, IClickable, IHoverable
     {
-        [SerializeField] float dragRadius = 0.5f;
         [SerializeField] DragPlane dragPlane;
         [SerializeField] Material hoveredMaterial;
-        [Space]
-        [Space]
-        [SerializeField] bool axisConstrained = false;
-        [SerializeField] bool axis = false;
+
 
         private RemoteController _controller;
 
@@ -43,28 +39,18 @@ namespace DodgyOrb.ThreeDButtons
         {
             if (_isHold)
             {
-                Vector2 dragMovement = ClampVector(dragPlane.GetDragMovement(), new Vector2(-dragRadius, -dragRadius), new Vector2(dragRadius, dragRadius));
+                Vector2 dragMovement = dragPlane.GetDragMovement();
+         
+                Vector2 normalizedMovement = dragMovement / (dragMovement.magnitude+ 0.000001f);
 
-
-                if (axisConstrained)
-                {
-                    dragMovement = new Vector2(axis ? dragMovement.x : 0, axis ? 0 : dragMovement.y);
-                }
+                float angle = Vector2.Angle(new Vector2(0, 1), normalizedMovement) * (normalizedMovement.x > 0 ? 1 : -1);
                 
-                Vector2 normalizedMovement = dragMovement / dragRadius;
-
-
-                transform.localPosition = new Vector3(dragMovement.x, transform.localPosition.y, dragMovement.y);
+                transform.localRotation = Quaternion.Euler(0,angle,0);
 
                 _controller.SendData(normalizedMovement);
             }
         }
-        private Vector2 ClampVector(Vector2 vector, Vector2 min, Vector2 max)
-        {
-            vector.x = Mathf.Clamp(vector.x, min.x, max.x);
-            vector.y = Mathf.Clamp(vector.y, min.y, max.y);
-            return vector;
-        }
+
         public void GetClicked()
         {
             dragPlane.ActivateDragPlane();
@@ -80,7 +66,7 @@ namespace DodgyOrb.ThreeDButtons
             dragPlane.GetReseted();
 
             _isHold = false;
-            transform.localPosition = new Vector3(0, transform.localPosition.y, 0);
+
             
             
             SetMaterial(_isHovered);
