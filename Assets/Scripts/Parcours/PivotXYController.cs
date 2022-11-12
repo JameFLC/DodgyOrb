@@ -17,6 +17,7 @@ public class PivotXYController : MonoBehaviour
         //Initialization
         rotationAxis = new Vector2(0.0f, 0.0f);
         targetRotation = new GameObject("targetRotationGO");
+        targetRotation.transform.localRotation = pivot.transform.localRotation;
         targetRotation.transform.parent = transform;
         _rigidbody = pivot.GetComponent<Rigidbody>();
     }
@@ -32,6 +33,5 @@ public class PivotXYController : MonoBehaviour
     public void GetData(Vector2 data)
     {
         rotationAxis = data;
-        Debug.Log(data);
     }
 }

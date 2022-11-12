@@ -10,7 +10,7 @@ namespace DodgyOrb.ThreeDButtons
     public class Button : MonoBehaviour, IClickable, IHoverable
     {
         [SerializeField] private Material hoveredMaterial;
-        [SerializeField] private bool sendDataOnRelease = true;
+        [SerializeField] private bool sendDataOnRelease = true; //Penser a l'activer dans l'inspector (bug?)
         [SerializeField] private Vector2 clickedData = new Vector2(1, 0);
         [SerializeField] private Vector2 releasedData = new Vector2(0, 0);
 

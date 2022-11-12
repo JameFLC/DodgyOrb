@@ -8,6 +8,9 @@ namespace DodgyOrb
     {
         [SerializeField] private float rotationValue;
         [SerializeField] private Transform wheel;
+        [SerializeField] private float speed = 0.01f;
+
+        private Quaternion previousRotation;
 
         // Start is called before the first frame update
         void Start()
@@ -18,7 +21,13 @@ namespace DodgyOrb
         // Update is called once per frame
         void Update()
         {
-            wheel.localRotation = Quaternion.Euler(rotationValue, wheel.localRotation.y, wheel.localRotation.z);
+            wheel.localRotation = Quaternion.Lerp(previousRotation, Quaternion.Euler(rotationValue, wheel.localRotation.y, wheel.localRotation.z), Time.deltaTime * speed);
+            previousRotation = wheel.localRotation;
+        }
+
+        public void GetData(Vector2 data)
+        {
+            rotationValue = data.x * 360;
         }
     }
 }
