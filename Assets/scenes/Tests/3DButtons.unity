@@ -859,6 +859,16 @@ PrefabInstance:
       propertyPath: OnDataSent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1750917513}
+    - target: {fileID: 7613205485409813116, guid: 8aac40938ab8ed74eba08ae880df6379,
+        type: 3}
+      propertyPath: OnDataSent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 7613205485409813116, guid: 8aac40938ab8ed74eba08ae880df6379,
+        type: 3}
+      propertyPath: OnDataSent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DodgyOrb.RemoteControls.CubeMoverReciever, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aac40938ab8ed74eba08ae880df6379, type: 3}

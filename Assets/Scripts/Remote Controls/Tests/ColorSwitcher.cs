@@ -6,8 +6,11 @@ namespace DodgyOrb.RemoteControls
 {
     public class ColorSwitcher : MonoBehaviour
     {
+        // Parametters
         [SerializeField] List<Material> materials;
 
+
+        // Variables
         private Vector2 _previousData = Vector2.zero;
         private int currentMaterial = 0;
         // Start is called before the first frame update
