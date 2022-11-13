@@ -16,7 +16,7 @@ namespace DodgyOrb
         private GameObject _selectedButton;
 
         private bool _wasSelectedLastFrame = false;
-
+        private bool _wasLastReleased = false;
 
 
         // Start is called before the first frame update
@@ -56,16 +56,13 @@ namespace DodgyOrb
             if (_selectedButton != null)
             {
                 HandleRelease();
+
             }
-
-
             if (Physics.Raycast(ray, out dragHit, maxRayDistance, dragMask))
             {
                 
                 HandleDrag(dragHit);
             }
-
-
         }
 
 
@@ -95,19 +92,24 @@ namespace DodgyOrb
             IClickable iClick = _selectedButton.GetComponent<IClickable>();
             if (iClick == null)
                 return;
-
             if (Input.GetMouseButtonDown(0))
+            {
                 iClick.GetClicked();
-
-            
+                _wasLastReleased = false;
+            }
         }
         private void HandleRelease()
         {
+            if (_wasLastReleased)
+                return;
             IClickable iClick = _selectedButton.GetComponent<IClickable>();
             if (iClick == null)
                 return;
             if (Input.GetMouseButtonUp(0))
+            {
                 iClick.GetReleased();
+                _wasLastReleased = true;
+            }
         }
 
         private void HandleDrag(RaycastHit dragHit)
