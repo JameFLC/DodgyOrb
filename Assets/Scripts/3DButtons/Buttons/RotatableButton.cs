@@ -44,7 +44,6 @@ namespace DodgyOrb.ThreeDButtons
                 Vector2 normalizedMovement = dragMovement / (dragMovement.magnitude+ 0.000001f);
 
                 float angle = Vector2.Angle(new Vector2(0, 1), normalizedMovement) * (normalizedMovement.x > 0 ? 1 : -1);
-                
                 transform.localRotation = Quaternion.Euler(0,angle,0);
 
                 _controller.SendData(normalizedMovement);

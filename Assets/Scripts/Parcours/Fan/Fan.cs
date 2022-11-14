@@ -9,7 +9,7 @@ namespace DodgyOrb
         // Parametters
         [SerializeField] private float fanPower = 1;
         [SerializeField] private ForceMode forceMode = ForceMode.Force;
-
+        [SerializeField] private bool switchToYAxis = false;
 
         // Variables
         private float _push = 0;
@@ -40,7 +40,7 @@ namespace DodgyOrb
 
         public void GetInput(Vector2 input)
         {
-            _push = Mathf.Clamp01(input.x);
+            _push = Mathf.Clamp01(switchToYAxis ? input.y : input.x);
         }
 
         private void OnTriggerEnter(Collider other)
