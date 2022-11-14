@@ -214,7 +214,7 @@ Transform:
   m_Children:
   - {fileID: 2181565864439099032}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &8307563179812669841
 CapsuleCollider:
@@ -244,3 +244,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fanPower: 60
   forceMode: 0
+  switchToYAxis: 0
