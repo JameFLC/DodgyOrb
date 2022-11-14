@@ -14,6 +14,7 @@ namespace DodgyOrb.ThreeDButtons
         [Space]
         [SerializeField] bool axisConstrained = false;
         [SerializeField] bool axis = false;
+        [SerializeField] bool resetOnReleased = true;
 
         private RemoteController _controller;
 
@@ -81,11 +82,11 @@ namespace DodgyOrb.ThreeDButtons
 
             _isHold = false;
             transform.localPosition = new Vector3(0, transform.localPosition.y, 0);
-            
-            
+
+            if (resetOnReleased)
+                _controller.SendData(new Vector2(0,0));
+
             SetMaterial(_isHovered);
-
-
         }
 
         public void GetHovered()
