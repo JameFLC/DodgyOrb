@@ -27,7 +27,8 @@ namespace DodgyOrb
 
         public void GetData(Vector2 data)
         {
-            rotationValue = data.x * 360;
+            float angle = Vector2.Angle(new Vector2(0, 1), data) * (data.x > 0 ? 1 : -1);
+            rotationValue = -angle;
         }
     }
 }
