@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -49,7 +49,7 @@ MonoBehaviour:
   pont2: {fileID: 8391087768720143068}
   pont3: {fileID: 8678679289788002922}
   buttonIsPressed: 0
-  speed: 10
+  speed: 5
 --- !u!1001 &181524111412938226
 PrefabInstance:
   m_ObjectHideFlags: 0
