@@ -163,7 +163,7 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
-    - _DepthOffsetEnable: 0
+    - _DepthOffsetEnable: 1
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 0.85
     - _DetailSmoothnessScale: 1
@@ -205,9 +205,9 @@ Material:
     - _NormalMapSpace: 0
     - _NormalScale: 0.5
     - _OpaqueCullMode: 2
-    - _PPDLodThreshold: 5
-    - _PPDMaxSamples: 15
-    - _PPDMinSamples: 5
+    - _PPDLodThreshold: 4.09
+    - _PPDMaxSamples: 20
+    - _PPDMinSamples: 7
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
     - _RayTracing: 0
