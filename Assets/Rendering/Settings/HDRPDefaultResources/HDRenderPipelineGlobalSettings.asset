@@ -92,6 +92,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48e911a1e337b44e2b85dbc65b47a594, type: 2}
   - {fileID: 11400000, guid: 879ffae44eefa4412bb327928f1a96dd, type: 2}
   - {fileID: 11400000, guid: 6b0853110d3fc314786bf9128ad27dd4, type: 2}
+  - {fileID: 11400000, guid: 62125add45a397f43a096a8b00636d0a, type: 2}
+  - {fileID: 11400000, guid: eef1be1539010334cb8969ad001f568e, type: 2}
   rendererListCulling: 0
   DLSSProjectId: 000000
   useDLSSCustomProjectId: 0

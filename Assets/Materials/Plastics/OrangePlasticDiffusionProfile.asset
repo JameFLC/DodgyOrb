@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2686e09ec7aef44bad2843e4416f057, type: 3}
-  m_Name: PlasticDiffusionProfile
+  m_Name: OrangePlasticDiffusionProfile
   m_EditorClassIdentifier: 
   profile:
-    scatteringDistance: {r: 0, g: 0.12848155, b: 0.24528301, a: 1}
+    scatteringDistance: {r: 0.18723558, g: 0.06241186, b: 0, a: 1}
     transmissionTint: {r: 1, g: 1, b: 1, a: 1}
     texturingMode: 0
     transmissionMode: 0
     thicknessRemap: {x: 0.49910754, y: 0.49910754}
     worldScale: 0.01
     ior: 1.003
-    hash: 1081162241
+    hash: 1076807052
   m_Version: 1
