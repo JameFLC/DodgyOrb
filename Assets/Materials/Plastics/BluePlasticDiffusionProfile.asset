@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BluePlasticDiffusionProfile
   m_EditorClassIdentifier: 
   profile:
-    scatteringDistance: {r: 0, g: 0.098075785, b: 0.18723558, a: 1}
+    scatteringDistance: {r: 0, g: 0.058965527, b: 0.11399999, a: 1}
     transmissionTint: {r: 1, g: 1, b: 1, a: 1}
     texturingMode: 0
     transmissionMode: 0
