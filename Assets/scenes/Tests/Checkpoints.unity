@@ -3755,7 +3755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagToCheck: Orb
-  useCheckpoints: 1
+  useCheckpoints: 0
 --- !u!4 &1803869417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4894715568507518882, guid: 05d8e269e5090de4a98d6da4bed5158c,
