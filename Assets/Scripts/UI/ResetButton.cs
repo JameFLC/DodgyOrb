@@ -16,7 +16,7 @@ namespace DodgyOrb
         {
             if (!_isClicked)
             {
-                checkpointTrigger.TriggerCheckpoint();
+                //checkpointTrigger.TriggerCheckpoint();
                 _isClicked = true;
             }
         }

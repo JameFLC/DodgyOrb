@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1750.9414, g: 1658.5137, b: 1791.8633, a: 1}
+  m_IndirectSpecularColor: {r: 1752.6797, g: 1659.9102, b: 1792.6562, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagToCheck: Orb
-  _useCheckpoints: 0
+  _useCheckpoints: 1
 --- !u!65 &1797305962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5060,7 +5060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -221.2, y: -12}
+  m_AnchoredPosition: {x: -221.19922, y: -12}
   m_SizeDelta: {x: 30, y: 26}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &2124508257578833271
@@ -5871,8 +5871,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2124508259164126256}
-        m_TargetAssemblyTypeName: DodgyOrb.ResetButton, Assembly-CSharp
+      - m_Target: {fileID: 1797305961}
+        m_TargetAssemblyTypeName: DodgyOrb.CheckpointTrigger, Assembly-CSharp
         m_MethodName: TriggerCheckpoint
         m_Mode: 1
         m_Arguments:
