@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1752.6797, g: 1659.9102, b: 1792.6562, a: 1}
+  m_IndirectSpecularColor: {r: 1750.9492, g: 1658.5137, b: 1791.8633, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1139,6 +1139,7 @@ Transform:
   - {fileID: 232802707}
   - {fileID: 1098636227}
   - {fileID: 846648933}
+  - {fileID: 2136838504}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3264,7 +3265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagToCheck: Orb
-  _useCheckpoints: 1
+  _useCheckpoints: 0
 --- !u!65 &1797305962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4888,6 +4889,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322c856dc34495e418c6a30e0d8b5c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2136838503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136838504}
+  - component: {fileID: 2136838506}
+  - component: {fileID: 2136838505}
+  m_Layer: 0
+  m_Name: Checkpoint (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2136838504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136838503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.371, y: 2.029, z: 5.541}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 677238488}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136838505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136838503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b924e200e10e04499101d4bc4f87b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToCheck: Orb
+  isReachableOnce: 1
+--- !u!65 &2136838506
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136838503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -1.19, z: 0}
 --- !u!224 &2124508257411451466
 RectTransform:
   m_ObjectHideFlags: 0
