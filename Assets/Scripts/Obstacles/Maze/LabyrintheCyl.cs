@@ -11,7 +11,6 @@ namespace DodgyOrb
         [SerializeField] private float speed = 0.01f;
 
         private Quaternion previousRotation;
-
         // Start is called before the first frame update
         void Start()
         {

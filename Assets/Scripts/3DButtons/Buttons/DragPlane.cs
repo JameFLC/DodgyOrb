@@ -6,7 +6,7 @@ namespace DodgyOrb.ThreeDButtons
 {
     public class DragPlane : MonoBehaviour, IDraggable
     {
-
+        [SerializeField] bool offsetFromFirstInput = true;
         private Collider _collider;
 
         private Vector2 currentPos = Vector2.zero;
@@ -36,10 +36,13 @@ namespace DodgyOrb.ThreeDButtons
             if (isReseted)
             {
                 isReseted = false;
-                defaultPos = position;
+                if (offsetFromFirstInput)
+                    defaultPos = position;
+                else
+                    defaultPos = new Vector2(transform.position.x, transform.position.z);
+                Debug.Log("Current Default pos = " + defaultPos);
             }
             currentPos = position;
-
             dragMovement = currentPos - defaultPos;
         }
 
@@ -48,7 +51,7 @@ namespace DodgyOrb.ThreeDButtons
         public void GetReseted()
         {
             isReseted = true;
-            Debug.Log("Reseted");
+            //Debug.Log("Reseted");
         }
 
     }
