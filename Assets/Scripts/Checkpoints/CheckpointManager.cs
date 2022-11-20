@@ -60,16 +60,17 @@ namespace DodgyOrb
                 Debug.LogWarning("Cant teleport to desired checkpoints no checkpoint has this index");
                 return;
             }
-            _objectToTeleport.transform.position = _checkpointPositions[checkpointIndex];
             // Reset velocity to prevent the teleported object to fly everywhere
             ResetObjectVeloity(_objectToTeleport.gameObject);
+            _objectToTeleport.transform.position = _checkpointPositions[checkpointIndex];
         }
         private void ResetObjectVeloity(GameObject gameObject)
         {
             Rigidbody objectRigiddody = gameObject.GetComponent<Rigidbody>();
             if (objectRigiddody != null)
             {
-                objectRigiddody.velocity = new Vector3(0, 0, 0);
+                objectRigiddody.velocity = Vector3.zero;
+                objectRigiddody.angularVelocity = Vector3.zero;
             }
         }
         public void AddCheckpoint(Vector3 position)
