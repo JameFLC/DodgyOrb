@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace DodgyOrb
@@ -13,11 +14,11 @@ namespace DodgyOrb
         [SerializeField] LayerMask dragMask;
         private Camera _cam;
 
+        private GameObject _hoveredButton;
         private GameObject _selectedButton;
-
         private bool _wasSelectedLastFrame = false;
         private bool _wasLastReleased = false;
-
+        private bool _isClicked = false;
 
         // Start is called before the first frame update
         void Start()
@@ -36,7 +37,10 @@ namespace DodgyOrb
 
             if (Physics.Raycast(ray, out buttonHit, maxRayDistance, buttonMask))
             {
-                _selectedButton = buttonHit.transform.gameObject;
+                _hoveredButton = buttonHit.transform.gameObject;
+                
+                if (!_isClicked)
+                    _selectedButton = _hoveredButton;
 
                 HandleHover();
 
@@ -53,7 +57,7 @@ namespace DodgyOrb
                 }
             }
 
-            if (_selectedButton != null)
+            if (_hoveredButton != null)
             {
                 HandleRelease();
 
@@ -71,7 +75,7 @@ namespace DodgyOrb
         {
             if (!_wasSelectedLastFrame)
             {
-                IHoverable iHover = _selectedButton.GetComponent<IHoverable>();
+                IHoverable iHover = _hoveredButton.GetComponent<IHoverable>();
                 if (iHover == null)
                     return;
 
@@ -81,7 +85,7 @@ namespace DodgyOrb
         }
         private void HandleUnHover()
         {
-            IHoverable ihover = _selectedButton.GetComponent<IHoverable>();
+            IHoverable ihover = _hoveredButton.GetComponent<IHoverable>();
             if (ihover != null)
             {
                 ihover.GetUnhovered();
@@ -96,6 +100,7 @@ namespace DodgyOrb
             {
                 iClick.GetClicked();
                 _wasLastReleased = false;
+                _isClicked = true;
             }
         }
         private void HandleRelease()
@@ -109,6 +114,7 @@ namespace DodgyOrb
             {
                 iClick.GetReleased();
                 _wasLastReleased = true;
+                _isClicked = false;
             }
         }
 
