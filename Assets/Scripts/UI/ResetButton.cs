@@ -6,19 +6,8 @@ namespace DodgyOrb
 {
     public class ResetButton : MonoBehaviour
     {
-        [SerializeField] CheckpointTrigger checkpointTrigger;
 
-        public void TriggerCheckpoint() => _isClicked = false;
+        public void ResetOrb() => CheckpointManager.instance.TeleportToCheckpoint(0);
 
-        private bool _isClicked = false;
-
-        private void Update()
-        {
-            if (!_isClicked)
-            {
-                //checkpointTrigger.TriggerCheckpoint();
-                _isClicked = true;
-            }
-        }
     }
 }
