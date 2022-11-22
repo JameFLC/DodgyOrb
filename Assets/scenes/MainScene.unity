@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1752.8887, g: 1659.7129, b: 1792.1562, a: 1}
+  m_IndirectSpecularColor: {r: 1752.2295, g: 1659.3457, b: 1792.1914, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -836,7 +836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 456800175}
   m_Layer: 0
-  m_Name: End (1)
+  m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -850,15 +850,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456800174}
   m_LocalRotation: {x: -0, y: 0.9914452, z: -0, w: -0.1305241}
-  m_LocalPosition: {x: -6.239, y: -0.76, z: -4.101}
+  m_LocalPosition: {x: -7.009, y: -0.76, z: -4.101}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 559194920}
   - {fileID: 2024388527}
   - {fileID: 1259579450}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1825504292}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 195, z: 0}
 --- !u!1 &502309427
 GameObject:
@@ -3532,6 +3532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 456800175}
   - {fileID: 1236443590}
   - {fileID: 741531770}
   - {fileID: 696346170}
@@ -6151,9 +6152,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1797305961}
-        m_TargetAssemblyTypeName: DodgyOrb.CheckpointTrigger, Assembly-CSharp
-        m_MethodName: TriggerCheckpoint
+      - m_Target: {fileID: 2124508259164126256}
+        m_TargetAssemblyTypeName: DodgyOrb.ResetButton, Assembly-CSharp
+        m_MethodName: ResetOrb
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6175,7 +6176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe78eb761789b04798b22c38185dd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointTrigger: {fileID: 1797305961}
 --- !u!1 &2124508259306080938
 GameObject:
   m_ObjectHideFlags: 0
