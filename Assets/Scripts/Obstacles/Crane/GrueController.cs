@@ -14,6 +14,13 @@ namespace DodgyOrb
         private float previousYValue;
         private Quaternion previousRotationValue;
 
+        private AudioSource craneSoundClap;
+
+        private void Start()
+        {
+            craneSoundClap = GetComponent<AudioSource>();
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -36,6 +43,7 @@ namespace DodgyOrb
         {
             if (orbCollider.tag == "Orb")
             {
+                craneSoundClap.Play();
                 orb = orbCollider.transform;
                 rigidbodyOrb = orb.GetComponent<Rigidbody>();
                 CatchOrb(orb);
