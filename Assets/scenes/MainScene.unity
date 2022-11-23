@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1752.8809, g: 1659.7188, b: 1792.1445, a: 1}
+  m_IndirectSpecularColor: {r: 1751.0557, g: 1657.2578, b: 1788.0938, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -864,7 +864,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 456800174}
-  m_LocalRotation: {x: -0, y: 0.9914452, z: -0, w: -0.1305241}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -7.009, y: -1.51, z: -4.101}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -874,7 +874,7 @@ Transform:
   - {fileID: 1259579450}
   m_Father: {fileID: 1825504292}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 195, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &502309427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,8 +1012,11 @@ GameObject:
   - component: {fileID: 559194920}
   - component: {fileID: 559194922}
   - component: {fileID: 559194921}
+  - component: {fileID: 559194925}
+  - component: {fileID: 559194923}
+  - component: {fileID: 559194926}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Bell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1084,6 +1087,129 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559194919}
   m_Mesh: {fileID: 2534964839176971238, guid: 30af757b0b9b8b5438a5e70b7d6f4029, type: 3}
+--- !u!82 &559194923
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559194919}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 66380245412035e4a9a8075959c1391b,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 4aa4aa7702465b147bd92d71c6061be8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 100
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.06168551
+      outSlope: 0.06168551
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.4394619
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -1.9394953
+      outSlope: -1.9394953
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.14349777
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &559194925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559194919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe50623eeb5fcb74eb160f101878c980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToCheck: Orb
+--- !u!65 &559194926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559194919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.88775754, y: 0.21875995, z: 1.9029655}
+  m_Center: {x: 0, y: 0.24566165, z: 0.22137499}
 --- !u!4 &568940802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2114579411301156723, guid: 6325da9341ffcb4408a7a84e7cd24b33,
@@ -2571,7 +2697,7 @@ GameObject:
   - component: {fileID: 1259579452}
   - component: {fileID: 1259579451}
   m_Layer: 0
-  m_Name: Plank.001
+  m_Name: Ouai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2748,6 +2874,18 @@ Transform:
   m_Father: {fileID: 1825504292}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1307161088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 931559423297007136, guid: 30cbb853dff939c4e9ddddddd9ae0eec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1353248918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12d84674fa48ef44996d02e5ac7433c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1309204826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5473633263804997395, guid: 30cbb853dff939c4e9ddddddd9ae0eec,
@@ -4989,7 +5127,7 @@ GameObject:
   - component: {fileID: 2024388529}
   - component: {fileID: 2024388528}
   m_Layer: 0
-  m_Name: Plank
+  m_Name: Syphon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5342,7 +5480,7 @@ MonoBehaviour:
   activatedSprite: {fileID: 1311273836, guid: ef4fb50c7fdd56147991b49cb7cf8198, type: 3}
   deactivatedSprite: {fileID: 1227551572, guid: ef4fb50c7fdd56147991b49cb7cf8198,
     type: 3}
-  checkpointTrigger: {fileID: 0}
+  checkpointTrigger: {fileID: 1307161088}
 --- !u!1 &2124508258070050618
 GameObject:
   m_ObjectHideFlags: 0
