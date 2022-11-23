@@ -150,7 +150,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  airFadeSpeed: 50
+  inAirFadeSpeed: 40
 --- !u!82 &9040036307029634730
 AudioSource:
   m_ObjectHideFlags: 0
