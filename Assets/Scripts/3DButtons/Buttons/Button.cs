@@ -19,11 +19,13 @@ namespace DodgyOrb.ThreeDButtons
         private Material _defaultMaterial;
         private bool isHold = false;
         private bool _isHovered = false;
+        private AudioSource _source;
         // Start is called before the first frame update
         void Start()
         {
             _controller = GetComponent<RemoteController>();
             _defaultMaterial = GetComponent<MeshRenderer>().material;
+            _source = GetComponent<AudioSource>();
             if (_controller == null)
             {
                 Debug.LogWarning("Missing controller in game object");
@@ -34,8 +36,9 @@ namespace DodgyOrb.ThreeDButtons
             _controller.SendData(clickedData);
 
             transform.position += new Vector3(0, -0.1f, 0);
+            PlaySound(true);
         }
-        public void GetReleased() // TODO FIXE LE RELEASE BIZAR QUI S'APPLIQUE PLUSIEURS FOIS
+        public void GetReleased()
         {
             if (sendDataOnRelease)
                 _controller.SendData(releasedData);
@@ -43,6 +46,7 @@ namespace DodgyOrb.ThreeDButtons
             transform.position += new Vector3(0, 0.1f, 0);
 
             SetMaterial(_isHovered);
+            PlaySound(false);
         }
         public void GetHovered()
         {
@@ -60,6 +64,13 @@ namespace DodgyOrb.ThreeDButtons
         {
             GetComponent<MeshRenderer>().material = setDefault ? hoveredMaterial : _defaultMaterial;
         }
+        private void PlaySound(bool isPushing)
+        {
+            if (_source == null)
+                return;
 
+            _source.pitch = isPushing ? 1f : 1.5f;
+            _source.PlayOneShot(_source.clip);
+        }
     }
 }
