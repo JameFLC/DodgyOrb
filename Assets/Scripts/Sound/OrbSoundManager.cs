@@ -46,7 +46,7 @@ namespace DodgyOrb
             Debug.LogFormat(IsOrbInMidAir() ? "True": "false");
         }
 
-        public float Normalize(float value, float from1, float to1)
+        private float Normalize(float value, float from1, float to1)
         {
             return (value - from1) / (to1 - from1) * (1 - 0) + 0;
         }
