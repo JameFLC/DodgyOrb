@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4894715567493442683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000000008714, y: 0.25, z: -0.000000014004}
-  m_LocalScale: {x: 0.8537932, y: 0.21721353, z: 0.8537932}
+  m_LocalPosition: {x: 0, y: 0.081, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4894715568507518882}
@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4894715567493442683}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 1809888109691376470, guid: 5dd6c33efe997f444a4b2060fa2ac387, type: 3}
 --- !u!23 &4894715567493442686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81c5fcbe5fb85134380aaf90171154f0, type: 2}
+  - {fileID: 2100000, guid: 31541450e81855040b6880f5d23e5729, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,7 +100,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 1809888109691376470, guid: 5dd6c33efe997f444a4b2060fa2ac387, type: 3}
 --- !u!114 &4894715567493442684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6b1ed1e5e89fc4aa47f29d61db79b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoveredMaterial: {fileID: 2100000, guid: 5154a15e05cff6547996be7b37fabefa, type: 2}
+  hoveredMaterial: {fileID: 2100000, guid: 32e5e0216ff591247ac33b39655a90c9, type: 2}
   sendDataOnRelease: 1
   clickedData: {x: 1, y: 0}
   releasedData: {x: 0, y: 0}

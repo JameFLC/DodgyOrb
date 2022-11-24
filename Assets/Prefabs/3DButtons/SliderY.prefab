@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42502568743dab4c8d9cdbd233bc631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetFromFirstInput: 1
 --- !u!1 &5181485207285455810
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,8 +195,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5181485207285455810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000000021073, y: 0.25, z: -0.0000000042147}
-  m_LocalScale: {x: 0.5, y: 0.24541406, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5181485207392752889}
@@ -208,7 +209,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5181485207285455810}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 3866246130468601587, guid: 5dd6c33efe997f444a4b2060fa2ac387, type: 3}
 --- !u!23 &5181485207285455815
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81c5fcbe5fb85134380aaf90171154f0, type: 2}
+  - {fileID: 2100000, guid: 31541450e81855040b6880f5d23e5729, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -264,7 +265,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 3866246130468601587, guid: 5dd6c33efe997f444a4b2060fa2ac387, type: 3}
 --- !u!114 &5181485207285455809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,9 +280,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragRadius: 0.25
   dragPlane: {fileID: 5181485207102069120}
-  hoveredMaterial: {fileID: 2100000, guid: 5154a15e05cff6547996be7b37fabefa, type: 2}
+  hoveredMaterial: {fileID: 2100000, guid: 32e5e0216ff591247ac33b39655a90c9, type: 2}
   axisConstrained: 1
   axis: 0
+  resetOnReleased: 1
 --- !u!114 &5181485207285455808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,5 +343,5 @@ Transform:
   - {fileID: 5181485207285455811}
   - {fileID: 5181485207102069123}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
