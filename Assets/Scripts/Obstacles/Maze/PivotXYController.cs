@@ -27,7 +27,7 @@ public class PivotXYController : MonoBehaviour
     {
         targetRotation.transform.localRotation = Quaternion.Euler(rotationAxis.y * maxAngle, 0, -rotationAxis.x * maxAngle);
 
-        //Interpolates between pivot.rotation and targetRotation.transform.rotation by timeCount * speed and normalizes the result afterwards
+        //Interpolates between pivot.rotation and targetRotation.transform.rotation by timeCount * maxSpeed and normalizes the result afterwards
         _rigidbody.rotation = Quaternion.Lerp(pivot.localRotation, targetRotation.transform.localRotation, Time.deltaTime * speed);
     }
     public void GetData(Vector2 data)
