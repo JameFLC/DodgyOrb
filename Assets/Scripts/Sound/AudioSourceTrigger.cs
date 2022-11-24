@@ -24,7 +24,7 @@ namespace DodgyOrb
             if (other.gameObject.tag == tagToCheck)
             {
                 _source.PlayOneShot(_source.clip);
-                Debug.Log(_source.clip.name + " clip was played");
+                Debug.Log(_source.clip.name + " clip was played You finished");
             }
         }
     }

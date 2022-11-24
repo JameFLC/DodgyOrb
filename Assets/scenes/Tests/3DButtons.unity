@@ -1072,7 +1072,7 @@ PrefabInstance:
     - target: {fileID: 5181485207285455809, guid: 0b21c15a4db0c084e8e01cc4efbdcee1,
         type: 3}
       propertyPath: resetOnReleased
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5181485207392752888, guid: 0b21c15a4db0c084e8e01cc4efbdcee1,
         type: 3}
