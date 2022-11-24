@@ -46,7 +46,7 @@ namespace DodgyOrb
         }
         // Public fading functions
         public void FadeIn() => FadeTo(1);
-        public void FadeOut() => FadeTo(0);
+        public void FadeOut() => FadeTo(0); 
         public void FadeTo(float alpha) => _targetAlpha = alpha;
     }
 }
