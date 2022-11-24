@@ -21,7 +21,7 @@ namespace DodgyOrb
         private float _push = 0;
         private List<Collider> _colliders = new();
         private AudioSource _source;
-        private float _fanLerp = 0;
+        private float _fanLerp = 0  ;
         private void Start()
         {
             _source = GetComponent<AudioSource>();
