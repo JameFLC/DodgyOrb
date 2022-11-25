@@ -40,7 +40,6 @@ namespace DodgyOrb.ThreeDButtons
                     defaultPos = position;
                 else
                     defaultPos = new Vector2(transform.position.x, transform.position.z);
-                Debug.Log("Current Default pos = " + defaultPos);
             }
             currentPos = position;
             dragMovement = currentPos - defaultPos;

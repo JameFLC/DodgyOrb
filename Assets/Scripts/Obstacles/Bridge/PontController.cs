@@ -41,6 +41,7 @@ namespace DodgyOrb
 
         public void GetData(Vector2 data)
         {
+            bridgeSoundFlip.pitch = Random.Range(0.8f, 1.2f);
             bridgeSoundFlip.Play();
             buttonIsPressed = (int)data.x;
         }

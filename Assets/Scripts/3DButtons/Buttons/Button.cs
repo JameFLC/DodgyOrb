@@ -69,7 +69,7 @@ namespace DodgyOrb.ThreeDButtons
             if (_source == null)
                 return;
 
-            _source.pitch = isPushing ? 1f : 1.5f;
+            _source.pitch = (isPushing ? 0.9f : 1.1f) + Random.Range(-0.1f,0.1f);
             _source.PlayOneShot(_source.clip);
         }
     }
