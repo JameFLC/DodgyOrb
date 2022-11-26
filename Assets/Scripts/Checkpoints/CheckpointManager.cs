@@ -8,12 +8,14 @@ namespace DodgyOrb
     {
         // Parameters
         [SerializeField] private string tagToCheck = "Orb";
+        [SerializeField] private Timer timer;
 
 
         // Variables
         [HideInInspector] public static CheckpointManager instance;
         private GameObject _objectToTeleport;
         private List<Vector3> _checkpointPositions = new();
+
         private void Awake()
         {
             // Singelton Pattern
@@ -67,6 +69,7 @@ namespace DodgyOrb
 
         private void TeleportObjectToCheckpoint(int checkpointIndex)
         {
+            timer.RestartTimer();
             // Reset velocity to prevent the teleported object to fly everywhere
             Rigidbody objectRigiddody = _objectToTeleport.GetComponent<Rigidbody>();
             Debug.Log(gameObject);

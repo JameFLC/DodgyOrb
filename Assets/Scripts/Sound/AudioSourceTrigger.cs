@@ -11,8 +11,10 @@ namespace DodgyOrb
     {
         // Parameters
         [SerializeField] private string tagToCheck = "Orb";
+        [SerializeField] private Timer timer;
         // Variables
         private AudioSource _source;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -23,6 +25,7 @@ namespace DodgyOrb
         {
             if (other.gameObject.tag == tagToCheck)
             {
+                timer.pauseTimer();
                 _source.PlayOneShot(_source.clip);
                 Debug.Log(_source.clip.name + " clip was played You finished");
             }
