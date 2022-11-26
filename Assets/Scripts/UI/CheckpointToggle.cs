@@ -17,6 +17,7 @@ namespace DodgyOrb
         // Variables
 
         private Image _checkpointImage;
+        public bool thereIsTimer;
         
         // Start is called before the first frame update
         void Start()
@@ -36,7 +37,19 @@ namespace DodgyOrb
             checkpointTrigger.SetUseCheckpoint(useCheckpoints);
         }
 
-        private void UpdateToggleSprite(bool isCheckpointActivated) => _checkpointImage.sprite = isCheckpointActivated ? activatedSprite : deactivatedSprite;
+        private void UpdateToggleSprite(bool isCheckpointActivated)
+        {
+            if (isCheckpointActivated)
+            {
+                _checkpointImage.sprite = activatedSprite;
+                thereIsTimer = false;
+            }
+            else
+            {
+                _checkpointImage.sprite = deactivatedSprite;
+                thereIsTimer = true;
+            }
+        }
 
     }
 }
