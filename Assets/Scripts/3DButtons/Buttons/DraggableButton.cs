@@ -44,17 +44,17 @@ namespace DodgyOrb.ThreeDButtons
         {
             if (_isHold)
             {
-                Vector2 dragMovement = ClampVector(dragPlane.GetDragMovement(), new Vector2(-dragRadius, -dragRadius), new Vector2(dragRadius, dragRadius));
+                Vector2 dragMovement = Vector2.ClampMagnitude(dragPlane.GetDragMovement(),dragRadius);
 
 
                 if (axisConstrained)
                 {
                     dragMovement = new Vector2(axis ? dragMovement.x : 0, axis ? 0 : dragMovement.y);
                 }
+
+                Vector2 normalizedMovement = (dragMovement / dragRadius);
+
                 
-                Vector2 normalizedMovement = dragMovement / dragRadius;
-
-
                 transform.localPosition = new Vector3(dragMovement.x, transform.localPosition.y, dragMovement.y);
 
                 _controller.SendData(normalizedMovement);
