@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6b1ed1e5e89fc4aa47f29d61db79b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoveredMaterial: {fileID: 2100000, guid: 32e5e0216ff591247ac33b39655a90c9, type: 2}
+  hoveredMaterial: {fileID: 2100000, guid: 27c489529b744ee449d3e9161cf949d4, type: 2}
   sendDataOnRelease: 1
   clickedData: {x: 1, y: 0}
   releasedData: {x: 0, y: 0}
@@ -269,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 4894715568494917466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalScale: {x: 1.2, y: 0.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4894715568507518882}
