@@ -43,7 +43,7 @@ namespace DodgyOrb
 
         private void Update()
         {
-            Transform child = transform.GetChild(0);
+            Transform child = transform.GetChild(0).GetChild(0);
             if (child)
             {
                 _fanLerp = Mathf.Lerp(_fanLerp, _push, fanAcceleration* Time.deltaTime);

@@ -10,6 +10,7 @@ namespace DodgyOrb
         [SerializeField] private string tagToCheck = "Orb";
         [SerializeField] private bool _useCheckpoints = true;
         private CheckpointManager _manager;
+        private AudioSource _audioSource;
         // Start is called before the first frame update
         void Start()
         {
