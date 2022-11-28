@@ -14,6 +14,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: lambert4SG
     second: {fileID: 2100000, guid: a557855023ec35c448b67b3d671f2d56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCube1_polySurface2Mat
+    second: {fileID: 2100000, guid: b642103949b713c46bc9f200fb058950, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface1_pCube1Mat
+    second: {fileID: 2100000, guid: a557855023ec35c448b67b3d671f2d56, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -57,7 +67,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

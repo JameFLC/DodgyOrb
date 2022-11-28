@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace DodgyOrb
@@ -85,6 +86,17 @@ namespace DodgyOrb
         {
             _checkpointPositions.Add(position);
 
+        }
+        public void ResetCheckpoints()
+        {
+            if (_checkpointPositions.Count < 1)
+                return;
+            Vector3 firstPosition = _checkpointPositions[0];
+            Debug.Log(firstPosition);
+            _checkpointPositions.Clear();
+            Debug.Log(firstPosition);
+            _checkpointPositions.Add(firstPosition);
+            Debug.Log(_checkpointPositions.Count);
         }
     }
 }

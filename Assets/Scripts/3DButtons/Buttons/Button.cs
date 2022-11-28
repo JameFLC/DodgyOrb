@@ -20,12 +20,14 @@ namespace DodgyOrb.ThreeDButtons
         private bool isHold = false;
         private bool _isHovered = false;
         private AudioSource _source;
+        private Vector3 defaultPos = Vector3.zero;
         // Start is called before the first frame update
         void Start()
         {
             _controller = GetComponent<RemoteController>();
             _defaultMaterial = GetComponent<MeshRenderer>().material;
             _source = GetComponent<AudioSource>();
+            defaultPos = transform.localPosition;
             if (_controller == null)
             {
                 Debug.LogWarning("Missing controller in game object");
@@ -35,7 +37,7 @@ namespace DodgyOrb.ThreeDButtons
         {
             _controller.SendData(clickedData);
 
-            transform.position += new Vector3(0, -0.1f, 0);
+            transform.localPosition = defaultPos - new Vector3(0f,0.1f,0f);
             PlaySound(true);
         }
         public void GetReleased()
@@ -43,7 +45,7 @@ namespace DodgyOrb.ThreeDButtons
             if (sendDataOnRelease)
                 _controller.SendData(releasedData);
 
-            transform.position += new Vector3(0, 0.1f, 0);
+            transform.localPosition = defaultPos;
 
             SetMaterial(_isHovered);
             PlaySound(false);

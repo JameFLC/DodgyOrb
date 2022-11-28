@@ -8,7 +8,7 @@ namespace DodgyOrb
     public class Checkpoint : MonoBehaviour
     {
         [SerializeField] private string tagToCheck = "Orb";
-        [SerializeField] private bool isReachableOnce = true;
+        [SerializeField] private bool isReachableOnce = false;
 
         private CheckpointManager _manager;
         private bool _alreadyReached = false;

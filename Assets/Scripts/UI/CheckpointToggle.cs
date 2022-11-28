@@ -34,6 +34,7 @@ namespace DodgyOrb
         private void UpdateCheckpoints(bool useCheckpoints)
         {
             UpdateToggleSprite(useCheckpoints);
+            CheckpointManager.instance.ResetCheckpoints();
             checkpointTrigger.SetUseCheckpoint(useCheckpoints);
         }
 
