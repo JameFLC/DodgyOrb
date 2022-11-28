@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragRadius: 0.25
   dragPlane: {fileID: 2884069917325716228}
-  hoveredMaterial: {fileID: 2100000, guid: 27c489529b744ee449d3e9161cf949d4, type: 2}
+  hoveredMaterial: {fileID: 2100000, guid: 31541450e81855040b6880f5d23e5729, type: 2}
   axisConstrained: 0
   axis: 0
   resetOnReleased: 1

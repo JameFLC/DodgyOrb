@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6b1ed1e5e89fc4aa47f29d61db79b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoveredMaterial: {fileID: 2100000, guid: 27c489529b744ee449d3e9161cf949d4, type: 2}
+  hoveredMaterial: {fileID: 2100000, guid: 31541450e81855040b6880f5d23e5729, type: 2}
   sendDataOnRelease: 1
   clickedData: {x: 1, y: 0}
   releasedData: {x: 0, y: 0}

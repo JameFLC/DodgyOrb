@@ -19,7 +19,6 @@ namespace DodgyOrb
         private bool _wasSelectedLastFrame = false;
         private bool _wasLastReleased = false;
         private bool _isClicked = false;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -37,15 +36,25 @@ namespace DodgyOrb
 
             if (Physics.Raycast(ray, out buttonHit, maxRayDistance, buttonMask))
             {
-                _hoveredButton = buttonHit.transform.gameObject;
-                
+                // Handle touch inputs
+
+                GameObject newHoveredButton = buttonHit.transform.gameObject;
+                if (_hoveredButton != null && newHoveredButton != _hoveredButton)
+                {
+                    Debug.Log("NewButton changed");
+                    UnhoverButtonsObject(_hoveredButton);
+                }
+
+
+                _hoveredButton = newHoveredButton;
+
                 if (!_isClicked)
                     _selectedButton = _hoveredButton;
 
                 HandleHover();
 
                 HandleClick();
-                
+
                 _wasSelectedLastFrame = true;
             }
             else
@@ -64,7 +73,7 @@ namespace DodgyOrb
             }
             if (Physics.Raycast(ray, out dragHit, maxRayDistance, dragMask))
             {
-                
+
                 HandleDrag(dragHit);
             }
         }
@@ -86,6 +95,14 @@ namespace DodgyOrb
         private void HandleUnHover()
         {
             IHoverable ihover = _hoveredButton.GetComponent<IHoverable>();
+            if (ihover != null)
+            {
+                ihover.GetUnhovered();
+            }
+        }
+        private void UnhoverButtonsObject(GameObject obj)
+        {
+            IHoverable ihover = obj.GetComponent<IHoverable>();
             if (ihover != null)
             {
                 ihover.GetUnhovered();
