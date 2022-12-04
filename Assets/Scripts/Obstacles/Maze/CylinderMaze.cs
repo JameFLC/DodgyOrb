@@ -28,7 +28,7 @@ namespace DodgyOrb
             _currentNormalizedSpeed = Mathf.Lerp(_currentNormalizedSpeed, _inputNormalizedSpeed, Time.deltaTime * acceleration);
 
             audioSource.pitch = Mathf.Lerp(0.8f , 1f, Mathf.Abs(_currentNormalizedSpeed));
-            audioSource.volume = Mathf.Lerp(0, 1, Mathf.Abs(_currentNormalizedSpeed));
+            audioSource.volume = Mathf.Lerp(0, 0.5f, Mathf.Abs(_currentNormalizedSpeed));
             _currentAngle = _currentNormalizedSpeed * maxSpeed * 360 * Time.deltaTime * -1;
             wheel.Rotate(new Vector3(1,0,0), _currentAngle);
         }

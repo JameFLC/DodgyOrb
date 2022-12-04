@@ -43,6 +43,7 @@ namespace DodgyOrb
                 {
                     Debug.Log("NewButton changed");
                     UnhoverButtonsObject(_hoveredButton);
+                    
                 }
 
 
@@ -89,7 +90,7 @@ namespace DodgyOrb
                     return;
 
                 iHover.GetHovered();
-
+                CursorChanger.instance.SetCursorToHover();
             }
         }
         private void HandleUnHover()
@@ -98,6 +99,7 @@ namespace DodgyOrb
             if (ihover != null)
             {
                 ihover.GetUnhovered();
+                CursorChanger.instance.SetCursorToDefault();
             }
         }
         private void UnhoverButtonsObject(GameObject obj)
