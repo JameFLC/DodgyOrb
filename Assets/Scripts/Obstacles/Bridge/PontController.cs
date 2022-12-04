@@ -10,6 +10,8 @@ namespace DodgyOrb
 
         private AudioSource bridgeSoundFlip;
 
+        [SerializeField] private Timer timer;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -39,10 +41,18 @@ namespace DodgyOrb
             }
         }
 
+
         public void GetData(Vector2 data)
         {
             bridgeSoundFlip.pitch = Random.Range(0.8f, 1.2f);
             bridgeSoundFlip.Play();
+            if (timer.number_click == 0)
+            {
+                timer.RestartTimer();
+            }
+
+            timer.number_click++;
+            
             buttonIsPressed = (int)data.x;
         }
     }
