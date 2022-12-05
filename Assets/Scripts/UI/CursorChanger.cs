@@ -7,8 +7,9 @@ namespace DodgyOrb
     public class CursorChanger : MonoBehaviour
     {
         // Parameters
-        [SerializeField] Texture2D defaultCursor;
-        [SerializeField] Texture2D hoverCursor;
+        [SerializeField] private Texture2D defaultCursor;
+        [SerializeField] private Texture2D hoverCursor;
+        [SerializeField] private bool disableCursorForTouchBuild = false;
 
         // Variables
         [HideInInspector] public static CursorChanger instance;
@@ -22,7 +23,11 @@ namespace DodgyOrb
                 Destroy(this);
         }
         // Start is called before the first frame update
-        void Start() => SetCursor(defaultCursor);
+        void Start()
+        {
+            Cursor.visible = !disableCursorForTouchBuild;
+            SetCursor(defaultCursor);
+        }
 
         public void SetCursorToDefault() => SetCursor(defaultCursor);
 
@@ -30,10 +35,9 @@ namespace DodgyOrb
 
         private void SetCursor(Texture2D newCursor)
         {
-            Cursor.visible = false;
             Vector2 cursorOffset = new Vector2(newCursor.width / 2, newCursor.height / 2);
-
-            Cursor.SetCursor(newCursor, cursorOffset, CursorMode.Auto);
+            
+            Cursor.SetCursor(newCursor, cursorOffset, CursorMode.ForceSoftware);
         }
     }
 }
